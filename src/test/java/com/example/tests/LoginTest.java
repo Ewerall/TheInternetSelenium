@@ -3,20 +3,18 @@ package com.example.tests;
 import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.example.pages.BasePage;
 import com.example.pages.LoginPage;
 
 public class LoginTest {
     private WebDriver driver;
     private LoginPage loginPage;
 
-    @BeforeEach
     public void setup() {
-        driver = new ChromeDriver();
+        driver = BasePage.createDriver(); 
         loginPage = new LoginPage(driver);
     }
     
