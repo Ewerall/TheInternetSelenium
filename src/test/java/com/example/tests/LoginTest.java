@@ -3,6 +3,7 @@ package com.example.tests;
 import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 
@@ -13,6 +14,7 @@ public class LoginTest {
     private WebDriver driver;
     private LoginPage loginPage;
 
+    @BeforeEach
     public void setup() {
         driver = BasePage.createDriver(); 
         loginPage = new LoginPage(driver);

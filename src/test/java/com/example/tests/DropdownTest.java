@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.openqa.selenium.WebDriver;
+
 import com.example.pages.BasePage;
 import com.example.pages.DropdownPage;
 
@@ -17,6 +18,7 @@ public class DropdownTest {
     public void setup() {
         driver = BasePage.createDriver(); 
         dropdownPage = new DropdownPage(driver);
+        dropdownPage.dropdownUrl();
     }
     
     @ParameterizedTest
