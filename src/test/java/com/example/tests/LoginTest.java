@@ -23,13 +23,13 @@ public class LoginTest {
     @Test
     public void testValidLogin() {
         loginPage.baseauth("admin", "admin");
-        assertTrue(loginPage.loginSuccessful(), "Логин должен быть успешным");
+        assertTrue(loginPage.loginSuccessful(), "Вход успешный");
     }
     
     @Test
     public void testInvalidLogin() {
         loginPage.baseauth("wrong", "wrong");
-        assertFalse(loginPage.loginSuccessful(), "Логин должен быть неуспешным");
+        assertFalse(loginPage.loginSuccessful(), "Вход неуспешный");
     }
     
     @AfterEach
